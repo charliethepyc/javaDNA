@@ -11,13 +11,13 @@ public class PublicTests {
     @Test
     public void test1_create_getMass() {
         DNA dna1 = new DNA("ATGCCAxCTATGGTAG");
-        assertEquals(2078.8, dna1.totalMass(), 0.001);
+        assertEquals(2078.8, dna1.totalMass(), 0.1);
     }
 
     @Test
     public void test2_create_checkProtein() {
         DNA dna2 = new DNA("ATGCCAACATGGATGCCCGATAT++GGATTG+A!");
-        assertTrue(dna2.isProtein());
+        assertEquals(true,dna2.isProtein());
     }
 
     @Test(expected=IllegalArgumentException.class)
